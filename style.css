@@ -30,42 +30,50 @@ html {
 
 body {
     margin: 0px;
-    /* background-color: black; */
     font-family: 'Raleway', sans-serif;
     perspective: 1000px;
 }
 
 #header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     min-height: 100vh;
     background-image: url("img/newYork.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 80%;
+    /* opacity: 80%; */
 }
 
 #header-headings {
-    padding: 7px;
     margin-right: auto;
     margin-left: auto;
     position: absolute;
 }
 
 nav {
+    z-index: 2;
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
 }
 
 h1 {
-    text-align: center;
     font-family: 'Caveat', cursive;
     font-size: 10rem;
     margin-bottom: 0;
+    color: white;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
 }
 
 h3 {
+    color: white;
     text-align: center;
     font-family: 'Caveat', cursive;
     font-size: 30px;
@@ -194,40 +202,40 @@ li a {
 .prices-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
-    margin: 0px 30px;
 }
 
-.prices-cell {
+.prices-card-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.prices-card {
     transform-style: preserve-3d;
-    z-index: 3;
-    border-radius: 20px;
-    padding: 20px 20px;
-    margin: 20px;
-    line-height: 1.8;
-    font-size: 18px;
-    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.8); 
-    box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.8);
+    position: relative;
+    background-color: thistle;
+    height: 90%;
+    width: 80%;
 }
 
-.prices-cell:hover .card {
-    /* animation-name: rotate-element;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; */
+.prices-card-container:hover .prices-card {
+    transform: rotateY(180deg);
+    transition: 1s ease-out;
 }
 
-.card {
-    position: absolute;
-    height: 100px;
-    width: 70px;
+.front,
+.back {
+    backface-visibility: hidden;
 }
 
 .front {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: blueviolet;
-    backface-visibility: hidden;
+    background-image: url("img/estee-janssens-aQfhbxailCs-unsplash.jpg");
+    background-size: cover;
 }
 
 .back {
@@ -235,27 +243,11 @@ li a {
     height: 100%;
     position: absolute;
     background-color: cadetblue;
-    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
-.card:hover > .front {
-    transform: perspective(500px) rotateY(180deg);
-
-}
-#user-row1 {
-    position: relative;
-    margin-right: -20px;
-    top: 45px;
-    left: -20px;
-    font-size: 40px;
-}
-
-#user-row2 {
-    position: relative;
-    margin-right: -20px;
-    top: 20px;
-    left: -20px;
-    font-size: 40px;
+.card-name {
+    transform: translateZ(100px);
 }
 
 #faq {
