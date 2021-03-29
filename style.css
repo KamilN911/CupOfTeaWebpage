@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Raleway&display=swap');
 
+
 @keyframes show {
 from {opacity: 0%;}
 to { opacity: 100%;}
@@ -195,10 +196,6 @@ li a {
     display: flex;
 }
 
-.general-english-prices-variant {
-    flex: 50%;
-}
-
 .prices-container {
     display: flex;
     flex-wrap: wrap;
@@ -221,13 +218,14 @@ li a {
 }
 
 .prices-card-container:hover .prices-card {
-    transform: rotateY(180deg);
+    transform: rotateY(.5turn);
     transition: 1s ease-out;
 }
 
 .front,
 .back {
     backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 .front {
@@ -243,7 +241,7 @@ li a {
     height: 100%;
     position: absolute;
     background-color: cadetblue;
-    transform: rotateY(180deg);
+    transform: rotateY(.5turn);
 }
 
 .card-name {
@@ -273,14 +271,6 @@ li a {
     border-radius: 10px;
     padding: 0px 20px;
     margin: 20px;
-}
-
-#back {
-    padding: 5px;
-    border-radius: 7px;
-    border: solid 3px gray;
-    font-size: 25px;
-    visibility: hidden;
 }
 
 footer {
