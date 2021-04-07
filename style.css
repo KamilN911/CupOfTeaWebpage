@@ -58,8 +58,6 @@ body {
 #header-headings {
     position: absolute;
     margin: 0 auto;
-    /* margin-right: auto;
-    margin-left: auto; */
 }
 
 nav {
@@ -77,6 +75,7 @@ nav {
 }
 
 .logo-container {
+    margin-left: 15px;
     font-family: var(--navigation-font);
     font-size: 0.8rem;
 }
@@ -85,13 +84,14 @@ nav {
     font-family: 'Caveat', cursive;
     text-shadow: black;
     text-shadow: 0px 5px 6px rgba(150, 150, 150, 1);
-    font-size: 15rem;
+    /* font-size: 15rem; */
+    font-size: calc(20vw - 2rem);
     margin: 0;
     color: white;
 }
 
 #header-headings > h2 {
-    font-size: 3rem;
+    font-size: calc(5vw);
     text-align: center;
     text-shadow: 0px 5px 6px rgba(150, 150, 150, 1);
 
@@ -124,7 +124,7 @@ h4 {
 p {
     text-align: justify;
     font-size: 1.1rem;
-    line-height: 1.7rem;
+    line-height: 1.9rem;
     font-family: var(--paragraph-font);
 }
 
@@ -135,13 +135,15 @@ p {
 }
 
 #navigation {
-    position: -webkit-sticky;
-    position: sticky;
     top: 60px;
     display: flex;
-    justify-content: space-evenly;
     width: 100%;
     background-color: rgba(255,255,255,0.75);
+}
+
+.navigation-menu {
+    margin: 0 auto;
+    align-self: center;
 }
 
 #navigation ul li {
@@ -160,20 +162,23 @@ ul {
 li a {
     font-size: 1.2rem;
     font-family: var(--navigation-font);
-    color: black;
     text-decoration: none;
+    color: black;
 }
 
 #navigation ul li:hover {
     cursor: pointer;
 }
 
-.menu li a {
-    padding: 2rem 0;
+.menu li {
+    /* width: 50%; */
+    border-radius: 10px;
+    background-color: rgba(150, 150, 150, 0.60);
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     line-height: 2.5rem;
-    font-size: 1.5rem;
+    margin: 4px;
+    font-size: 1rem;
 }
 
 .menu li ul {
@@ -192,15 +197,37 @@ li a {
 
 #about-section {
     background-color:white;
+    padding: 40px 0;
+}
+
+.about-section-flex-container {
+    margin-top: 6rem;
+    display: flex;
 }
 
 .about-section-left {
+    background-color: black;
+    color: white;
+    flex: 1;
     margin: 2rem;
+    margin-left: 0;
+    position: relative;
+}
+
+.about-section-left h3 {
+    position: absolute;
+    text-align: right;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    right: 0;
+    margin: 0 -5px 0 0;
+    font-size: 12rem;
 }
 
 .about-section-right {
-    margin: 2rem;
-    order: 2;
+    margin: 0 4rem;
+    padding: 20px;
+    flex: 1;    
 }
 
 .competences-header {
@@ -220,7 +247,8 @@ li a {
 }
 
 .question-list {
-    margin-top: 3rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 .question-list li {
@@ -229,25 +257,31 @@ li a {
     line-height: 2rem;
 }
 
+#learn-with-me-section h3 {
+    text-align: center;
+}
+
 #learn-with-me-section {
+    min-height: 120vh;
+    padding: 0px 0px;
     flex-direction: row;
 }
 
 .learn-with-me-container {
     display: flex;
+    height: 100%;
 }
 
-#menu-container {
+#learn-with-me-left {
+    background-image: url(img/brendan-church-pKeF6Tt3c08-unsplash.jpg);
+    background-size: cover;
     flex: 4;
+    padding-right: 30px;
 }
 
-#menu-description-container {
-    border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.6);
-    -moz-box-shadow:    0px 0px 7px 0px rgba(50, 50, 50, 0.6);
-    box-shadow:         0px 0px 7px 0px rgba(50, 50, 50, 0.6);
+#learn-with-me-right {
     flex: 3;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 #contact-section {
@@ -266,6 +300,14 @@ li a {
 
 #translations-section {
     background-color: rgba(150, 150, 150, 0.60);
+    position: relative;
+}
+
+#translations-section img {
+    height: 100%;
+    opacity: 20%;
+    position: absolute;
+    right: 10%;
 }
 
 .prices-container {
@@ -290,9 +332,9 @@ li a {
 }
 
 .flipping-card {
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.6);
-    -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.6);
-    box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.6);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.6);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.6);
+    box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.6);
     transform-style: preserve-3d;
     position: relative;
     height: 80%;

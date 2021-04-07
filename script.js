@@ -3,9 +3,11 @@ const a2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapib
 const a3 = "Donec mi eros, auctor ac luctus tempus, tincidunt in sem. Aliquam erat volutpat. Cras ac sapien id urna pretium finibus. Aliquam pellentesque magna ipsum, vel sodales magna viverra non. Aliquam quis nisi gravida, feugiat leo in, tempus orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean non sagittis diam, sed tempor odio. Proin id tempus enim. Nullam eget vulputate erat. Vivamus sapien tellus, tincidunt at tellus sed, accumsan venenatis velit.";
 
 const answersArr = [a1, a2, a3];
-let backBtn = $("#back").click(function (e) { 
-    e.preventDefault();
-});
 
+function translateParagraph() {
+    // let para = $("#paragraph").text();
+    // let arr = para.split("");
+    console.log(arr);   
+}
 
 
